@@ -1,0 +1,171 @@
+import React from 'react'
+import '../styles/global.css'
+
+const Layout = ({ children }) => {
+  return (
+    <div>
+      <header>
+        {/* Header content */}
+      </header>
+      <main>{children}</main>
+      <footer>
+        {/* Footer content */}
+      </footer>
+    </div>
+  )
+}
+
+export default Layout/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
+/* Global Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+a {
+  color: #ff6b6b;
+  text-decoration: none;
+}
+
+/* Header */
+header {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav a {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Hero Section */
+.hero-section {
+  background-image: url('../images/hero-image.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 24px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Sections */
+section {
+  padding: 80px 0;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+/* Destination List */
+.destination-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+}
+
+.destination-card {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.destination-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.destination-card h3 {
+  font-size: 24px;
+  margin: 20px;
+}
+
+.destination-card p {
+  margin: 0 20px 20px;
+}
+
+/* Component Container */
+.component-container {
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+}
+
+.component-container h2 {
+  font-size: 24px;
+  color: #ff6b6b;
+  margin-bottom: 16px;
+}
+
+.component-container ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 20px;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+footer li {
+  margin: 0 10px;
+}
+
+footer a {
+  color: #fff;
+}
